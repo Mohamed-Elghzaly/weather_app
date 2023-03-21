@@ -39,7 +39,7 @@ class _WeatherHomeState extends State<WeatherHome> {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                WeatherSearch(color: Colors.black),
+                const WeatherSearch(color: Colors.black),
                 const SizedBox(
                   height: 50,
                 ),

@@ -3,12 +3,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../weather_cubit/weather_cubit.dart';
 
-// ignore: must_be_immutable
-class WeatherSearch extends StatelessWidget {
-  WeatherSearch({super.key, required this.color});
+class WeatherSearch extends StatefulWidget {
+  const WeatherSearch({super.key, required this.color});
 
+  final Color? color;
 
-  Color? color;
+  @override
+  State<WeatherSearch> createState() => _WeatherSearchState();
+}
+
+class _WeatherSearchState extends State<WeatherSearch> {
   String? cityName;
 
   @override
@@ -38,13 +42,13 @@ class WeatherSearch extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide(color: color!)),
+                borderSide: BorderSide(color: widget.color!)),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide(color: color!)),
+                borderSide: BorderSide(color: widget.color!)),
             disabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide(color: color!)),
+                borderSide: BorderSide(color: widget.color!)),
             hintText: 'Enter a City',
           ),
         ),

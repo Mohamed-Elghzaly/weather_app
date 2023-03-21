@@ -31,7 +31,7 @@ class WeatherPageBody extends StatelessWidget {
               const SizedBox(
                 height: 100,
               ),
-               WeatherSearch( color: Colors.white),
+              const WeatherSearch(color: Colors.white),
               const SizedBox(
                 height: 100,
               ),
